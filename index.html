@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Plus_Week_2_Summary</title>
+    <meta charset="UTF-8" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link href="src/styles.css" />
+  </head>
+  <body>
+    <div class="main-box">
+    <div class="header_container">
+      <div class="header_container_buttons">
+        <div class="header_container_Navbar_buttons">
+          <nav class="nav nav-pills flex-column flex-sm-row">
+            <a
+              class="flex-sm-fill text-sm-center nav-link active"
+              aria-current="page"
+              href="#"
+              >Сьогодні</a
+            >
+            <a class="flex-sm-fill text-sm-center nav-link" href="#">Погодинно</a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="#">10 Днів</a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="#"
+              >На місяць</a
+            >
+          </nav>
+        </div>
+      </div>
+    </div>
+    
+    <div class="form">
+      <nav class="navbar">
+        <div class="container">
+          <form class="d-flex" id="search-city-form">
+            <input
+              class="form-control me-5"
+              type="search"
+              id ="search-city"
+              placeholder="Дніпро, Дніпропетровська обл., Україна-мати"
+              autofocus="on"
+            />
+            <input type="submit" value="Пошук" class="search_button"/>
+           
+                  <div class="col-3">
+                      <button
+                        class="btn btn-success w-100"
+                        id="current-location-button"
+                      >
+                        Current
+                      </button>
+                    </div>
+          </form>
+        </div>
+      </nav>
+    </div>
+    
+    <div class = "main_container">
+    <div class="cardbody_name" id="Date">
+      29 Травня
+    </div>
+    <div class="cardbody_name_current" id="current-date">
+      Вівторок, час
+    </div>
+    <div class="cardbody_name_city" id="current-city">
+      Дніпро
+    </div>
+    <div class="weather-box">
+      <div class="cardbody">
+        <img
+          class="cardbody_icon"
+          src="src/img/sunny.png"
+          alt="img1"
+          width="100"
+        />
+        <div class="cardbody_temperature_details">
+          <span class="cardbody_temperature" id="cardbody_temperature_current">
+            25
+          </span>
+          <span class="cardbody_details" id="units">
+            <a href="###" id="celsius">
+          °C
+          </a> 
+          |
+          <a href="###" id="farenheit">°F
+            </a>
+              </span>
+        </div>
+
+        <div class="cardbody_weather_details">
+          <div class="row_cardbody_weather_details">
+            <div class="cardbody_weather_details_item">
+              <div class="cardbody_weather_details_item_name">
+                Вологість:
+              </div>
+              <div class="cardbody_weather_details_item_name" id="humidity">
+                59%
+              </div>
+            </div>
+          </div>
+          <div class="cardbody_weather_details_item">
+            <div class="cardbody_weather_details_item_name">
+              Вітер:
+            </div>
+            <div class="cardbody_weather_details_item_name" id="wind">
+                6 км/год
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="forecast-for-week">
+        <div class="forecast-for-week-header">
+          <p>
+            Погода на тиждень
+          </p>
+        </div>
+        <div class="forecas-for-week-text">
+          <p>
+            (так щоб розуміти коли визжати на мотику 🛣️🏍️)
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="forecast">
+          <div class="forecast-monday">
+            <div class="forecast_item">Понеділок</div>
+            <div class="forecast_img">
+              <img
+                class="forecast_img_1"
+                src="/src/img/partly-cloudy.png"
+                alt="img2"
+                width="80"
+              />
+            </div>
+            <div class="forecast_temperature">20°C</div>
+          </div>
+          <div class="forecast-thuesday">
+            <div class="forecast_item">Вівторок</div>
+            <div class="forecast_img">
+              <img
+                class="forecast_img"
+                src="/src/img/raining.png"
+                alt="img3"
+                width="80"
+              />
+            </div>
+            <div class="forecast_temperature">25°C</div>
+          </div>
+
+          <div class="forecast-wednesday">
+            <div class="forecast_item">Середа</div>
+            <div class="forecast_img">
+              <img
+                class="forecast_img"
+                src="/src/img/thunderstorm.png"
+                alt="img4"
+                width="80"
+              />
+            </div>
+            <div class="forecast_temperature">21°C</div>
+          </div>
+
+          <div class="forecast-thusday">
+            <div class="forecast_item">Четвер</div>
+            <div class="forecast_img">
+              <img
+                class="forecast_img"
+                src="/src/img/thunderbolt.png"
+                alt="img5"
+                width="80"
+              />
+            </div>
+            <div class="forecast_temperature">22°C</div>
+          </div>
+          <div class="forecast-friday">
+            <div class="forecast_item">П'ятниця</div>
+            <div class="forecast_img">
+              <img
+                class="forecast_img"
+                src="/src/img/partly-cloudy.png"
+                alt="img6"
+                width="80"
+              />
+            </div>
+            <div class="forecast_temperature">23°C</div>
+          </div>
+          <div class="forecast-saturday">
+            <div class="forecast_item">Субота</div>
+            <div class="forecast_img">
+              <img
+                class="forecast_img"
+                src="/src/img/cloudy-day.png"
+                alt="img7"
+                width="80"
+                <
+              />
+            </div>
+            <div class="forecast_temperature">24°C</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="button-forecast-10days">
+      <button type="button-forecast-10-days" class="btn btn-outline-primary">
+        Прогноз на 10 днів
+      </button>
+    </div>
+      <div>
+          <p>
+        <a href="https://github.com/IraGrecha/Weather_bot.git"> Open-source code</a>
+        by Ira Grechikhina
+      </p>
+        </div>
+        </div>
+  </div>
+</div>
+</div>
+    <script src="src/index.js"></script>
+  </body>
+</html>

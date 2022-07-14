@@ -1,2 +1,2 @@
-# Weather_bot
+# My_weather_bot
 Created with CodeSandbox
